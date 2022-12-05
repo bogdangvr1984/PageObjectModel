@@ -25,21 +25,17 @@ public class ShopPage {
 		driver.findElement(filterByCookBooks).click();
 	}
 	
-	/*	public boolean onSale(By locator) {
+	public void onSale() {
 		
-		List<ShopPage> books = webDriver.findElements(By.xpath("//img[@class='attachment-woocommerce_thumbnail size-woocommerce_thumbnail']"));
-		for(ShopPage booksOnSale : books){
-		    if(books.equals(booksOnSale)){
-		        return books;
-		    }
-		    else{
-		        return null;
-		    }
+		//List<WebElement> allBooks = driver.findElements(By.xpath("//img[@class='attachment-woocommerce_thumbnail size-woocommerce_thumbnail']"));
+		//List<WebElement> allBooks = driver.findElements(By.linkText("SALE!"));
+		List<WebElement> allBooks = driver.findElements(By.xpath("//span[@class='onsale']"));
+		    System.out.println("Number of cookbooks on sale is " + allBooks.size());
 		}
-		
-		return driver.findElement(locator).isDisplayed();
-	}
-*/
+
+	
+
+	
 	public void filterByValue(String value) {
 		
 		WebElement element = driver.findElement(orderDropDown);
