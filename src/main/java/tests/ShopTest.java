@@ -1,5 +1,6 @@
 package tests;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.Test;
@@ -18,6 +19,8 @@ public class ShopTest extends BaseTest {
 		
 		menu.navigateTo(menu.booksLink);
 		shopPage.filterBooks();
+		
+		shopPage.onSale();
 		
 //		assertTrue(shopPage.onSale(shopPage.booksOnSale));
 		

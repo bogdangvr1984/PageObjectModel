@@ -3,7 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class MenuPage {
+import utils.SeleniumWrappers;
+
+public class MenuPage extends SeleniumWrappers{
 	
 	public WebDriver driver;
 	
@@ -16,6 +18,18 @@ public class MenuPage {
 	public By booksLink = By.linkText("BOOKS");
 	public By blogLink = By.linkText("BLOG");
 	public By classicLink = By.xpath("//li[@id='menu-item-114']/a[@href='https://keybooks.ro/category/classic/']");
+	public By homeLink = By.linkText("HOME");
+	public By eventsLink = By.linkText("EVENTS");
+	
+	public By searchIcon = By.cssSelector("button[class*='search_submit']");
+	public By searchInput = By.cssSelector("input[class='search_field']");
+	
+	public void search(String text) {
+		
+		click(searchIcon);
+		sendKeys(searchInput, text);
+		click(searchIcon);
+	}
 	
 	
 	public void navigateTo(By locator) {

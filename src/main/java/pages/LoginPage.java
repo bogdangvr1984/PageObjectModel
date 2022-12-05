@@ -3,7 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+import utils.SeleniumWrappers;
+
+public class LoginPage extends SeleniumWrappers{
 	
 	public WebDriver driver;
 	
@@ -19,22 +21,29 @@ public class LoginPage {
 	public By loginSuccessMsg = By.cssSelector("div[class*='sc_infobox_style_success']");
 	
 	public By logoutButton = By.cssSelector("li[class='menu_user_logout']");
+	public By closePopUp = By.cssSelector("a[class='popup_close']");
 	
 	public void loginInApp(String username, String password) {
-		driver.findElement(usernameField).sendKeys(username);
-		driver.findElement(passwordField).sendKeys(password);
-		driver.findElement(submitButton).click();
+		
+		//driver.findElement(usernameField).sendKeys(username);
+		//driver.findElement(passwordField).sendKeys(password);
+		//driver.findElement(submitButton).click();
+		
+		sendKeys(usernameField, username);
+		sendKeys(passwordField, password);
+		click(submitButton);
 	}
 	
-	public boolean checkMsgIsDisplayed(By locator) {
+/*	public boolean checkMsgIsDisplayed(By locator) {
 		
 		return driver.findElement(locator).isDisplayed();
 		
-	}
+	}*/
 	
 	public void logoutFromApp() {
 		
-		driver.findElement(logoutButton).click();
+		//driver.findElement(logoutButton).click();
+		click(logoutButton);
 	}
 	
 
