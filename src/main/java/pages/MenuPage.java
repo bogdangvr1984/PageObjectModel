@@ -24,6 +24,8 @@ public class MenuPage extends SeleniumWrappers{
 	public By searchIcon = By.cssSelector("button[class*='search_submit']");
 	public By searchInput = By.cssSelector("input[class='search_field']");
 	
+	public By userName = By.xpath("//span[@class='user_name']");
+	
 	public void search(String text) {
 		
 		click(searchIcon);

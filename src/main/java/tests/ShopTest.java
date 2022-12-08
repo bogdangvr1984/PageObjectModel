@@ -18,7 +18,7 @@ public class ShopTest extends BaseTest {
 		ShopPage shopPage = new ShopPage(driver);
 		
 		menu.navigateTo(menu.booksLink);
-		shopPage.filterBooks();
+		shopPage.filterBooks(shopPage.filterByCookBooks);
 		
 		shopPage.onSale();
 		

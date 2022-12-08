@@ -21,8 +21,8 @@ public class ShopPage {
 	
 	public By orderDropDown = By.name("orderby");
 	
-	public void filterBooks() {
-		driver.findElement(filterByCookBooks).click();
+	public void filterBooks(By locator) {
+		driver.findElement(locator).click();
 	}
 	
 	public void onSale() {
@@ -65,4 +65,8 @@ public class ShopPage {
 		Select selectDropdown = new Select(element);
 		return selectDropdown.getFirstSelectedOption().getText();
     }
+    
+    public void openBook(String text) {
+		driver.findElement(By.linkText(text)).click();
+	}
 }
