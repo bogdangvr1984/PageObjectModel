@@ -8,7 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ContactsPage {
+import utils.SeleniumWrappers;
+
+public class ContactsPage extends SeleniumWrappers{
 	
 	public WebDriver driver;
 	

@@ -7,7 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class ShopPage {
+import utils.SeleniumWrappers;
+
+public class ShopPage extends SeleniumWrappers {
 	
     public WebDriver driver;
     public Select selectDropdown;
@@ -18,6 +20,8 @@ public class ShopPage {
 	
 	public By filterByCookBooks = By.xpath("//a[@href='https://keybooks.ro/product-category/cookbooks/']");
 	public By booksOnSale = By.xpath("//span[@class='onsale']");
+	public By sliderInitalPosition = By.cssSelector("span[style=\"left: 0%;\"]");
+	public By sliderFinalPosition = By.cssSelector("span[style=\"left: 100%;\"]");
 	
 	public By orderDropDown = By.name("orderby");
 	

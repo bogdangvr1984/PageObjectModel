@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.TestException;
@@ -13,6 +14,35 @@ public class SeleniumWrappers extends BaseTest{
 	
 	//WebElement element = driver.findElement(locator);
 	//element.click();
+	
+	public WebElement getWebElement(By locator) {
+		waitForElementToBeVisible(locator);
+		return driver.findElement(locator);
+	}
+	
+	public void dragAndDrop(By locator, int x, int y) {
+		try {
+			getWebElement(locator);
+			//WebElement element = driver.findElement(locator);
+			Actions action = new Actions(driver);
+			action.dragAndDropBy(getWebElement(locator), x, y).perform();
+			//action.clickAndHold(element).moveByOffset(x, y).release().perform();
+					
+		}catch(NoSuchElementException e) {
+			new TestException(e.getMessage());
+		}
+	}
+	
+	public void hoverElement(By locator) {
+		try {
+		WebElement element = driver.findElement(locator);
+		Actions action = new Actions(driver);
+		action.moveToElement(element).perform();
+		
+		}catch(NoSuchElementException e) {
+			 new TestException(e.getMessage());
+		}
+	}
 	
 	/**
 	 * 
@@ -28,6 +58,7 @@ public class SeleniumWrappers extends BaseTest{
 			waitForElementToBeClickable(locator);
 			WebElement element = driver.findElement(locator);
 			element.click();
+			//getWebElement(locator).click();
 			
 		}catch(NoSuchElementException e) {
 			throw new TestException(e.getMessage());
