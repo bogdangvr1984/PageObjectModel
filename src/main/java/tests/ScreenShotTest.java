@@ -12,7 +12,7 @@ public class ScreenShotTest extends BaseTest{
 	@Test
 	public void screenshotTest() {
 		try {
-		app.menu.navigateTo(app.menu.booksLink);
+		app.menu.navigateTo(app.menu.shopLink);
 		assertEquals(driver.getCurrentUrl(), "https://keybooks.ro/shoplink/");
 	}catch (Exception e) {
 		ScreenShots sc = new ScreenShots();

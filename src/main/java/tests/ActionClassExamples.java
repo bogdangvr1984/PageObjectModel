@@ -26,7 +26,7 @@ public class ActionClassExamples extends BaseTest {
 	//@Test
 	public void dragAndDropTest() throws InterruptedException {
 		
-		app.menu.navigateTo(app.menu.booksLink);
+		app.menu.navigateTo(app.menu.shopLink);
 		app.shop.dragAndDrop(app.shop.sliderInitalPosition, 100, 0);
 		app.shop.dragAndDrop(app.shop.sliderFinalPosition, -100, 0);
 		Thread.sleep(3000);

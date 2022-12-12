@@ -17,7 +17,7 @@ public class MenuPage extends SeleniumWrappers{
 	
 	public By loginLink = By.linkText("Login");
 	public By contactLink = By.linkText("CONTACTS");
-	public By booksLink = By.linkText("BOOKS");
+	public By shopLink = By.linkText("BOOKS");
 	public By blogLink = By.linkText("BLOG");
 	//public By shopLink = By.linkText("BOOKS");
 	public By classicLink = By.xpath("//li[@id='menu-item-114']/a[@href='https://keybooks.ro/category/classic/']");

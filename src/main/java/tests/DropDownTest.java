@@ -15,7 +15,7 @@ public class DropDownTest extends BaseTest {
 	@Test(priority = 1)
 	public void selectByValueTest() {
 		
-		menu.navigateTo(menu.booksLink);
+		menu.navigateTo(menu.shopLink);
 		ShopPage shop = new ShopPage(driver);
 		shop.filterByValue("price-desc");
 		assertEquals(driver.getCurrentUrl(), "https://keybooks.ro/shop/?orderby=price-desc");
@@ -24,7 +24,7 @@ public class DropDownTest extends BaseTest {
 	
 	@Test(priority = 2)
 	public void selectByIndexTest() {
-		menu.navigateTo(menu.booksLink);
+		menu.navigateTo(menu.shopLink);
 		ShopPage shop = new ShopPage(driver);
 		shop.filterByIndex(3);
 		assertEquals(shop.getCurrentSelectedOption(), "Sort by latest");
@@ -32,7 +32,7 @@ public class DropDownTest extends BaseTest {
 	
 	@Test(priority = 3)
 	public void selectByVisibleTextTest() {
-		menu.navigateTo(menu.booksLink);
+		menu.navigateTo(menu.shopLink);
 		ShopPage shop = new ShopPage(driver);
 		shop.filterByVisibleText("Sort by popularity");
 		assertEquals(shop.getCurrentSelectedOption(), "Sort by popularity");
@@ -40,7 +40,7 @@ public class DropDownTest extends BaseTest {
 	
 	@Test(priority = 4)
 	public void example() throws InterruptedException {
-		menu.navigateTo(menu.booksLink);
+		menu.navigateTo(menu.shopLink);
 		WebElement dropdown = driver.findElement(By.name("orderby"));//incerca in memorie un webelement
 		Select select = new Select(dropdown);//primeste webelementul
 		select.selectByIndex(2);//se folosests de webelement si face refresh (si se ia alt id de sesiune)

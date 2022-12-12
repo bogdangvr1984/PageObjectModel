@@ -17,12 +17,10 @@ public class ShopTest extends BaseTest {
 		MenuPage menu = new MenuPage(driver);
 		ShopPage shopPage = new ShopPage(driver);
 		
-		menu.navigateTo(menu.booksLink);
+		menu.navigateTo(menu.shopLink);
 		shopPage.filterBooks(shopPage.filterByCookBooks);
 		
-		shopPage.onSale();
-		
-//		assertTrue(shopPage.onSale(shopPage.booksOnSale));
+		assertTrue(shopPage.allBooksIsOnSale());
 		
 		Thread.sleep(3000);
 	}

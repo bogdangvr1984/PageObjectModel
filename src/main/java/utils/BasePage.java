@@ -1,5 +1,6 @@
 package utils;
 
+import pages.AudioPostPage;
 import pages.ContactsPage;
 import pages.MenuPage;
 import pages.PostFormatsPage;
@@ -11,5 +12,6 @@ public class BasePage extends BaseTest{
 	public ShopPage shop = new ShopPage(driver);
 	public ContactsPage contact = new ContactsPage(driver);
 	public PostFormatsPage postFormat = new PostFormatsPage(driver);
+	public AudioPostPage audioPost = new AudioPostPage(driver);
 
 }

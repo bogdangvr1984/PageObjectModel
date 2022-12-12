@@ -23,20 +23,29 @@ public class ShopPage extends SeleniumWrappers {
 	public By sliderInitalPosition = By.cssSelector("span[style=\"left: 0%;\"]");
 	public By sliderFinalPosition = By.cssSelector("span[style=\"left: 100%;\"]");
 	
+	 public By countBooks = By.cssSelector("ul[class*='products']>li");
+	
 	public By orderDropDown = By.name("orderby");
 	
 	public void filterBooks(By locator) {
 		driver.findElement(locator).click();
 	}
 	
-	public void onSale() {
-		
-		//List<WebElement> allBooks = driver.findElements(By.xpath("//img[@class='attachment-woocommerce_thumbnail size-woocommerce_thumbnail']"));
-		//List<WebElement> allBooks = driver.findElements(By.linkText("SALE!"));
-		List<WebElement> allBooks = driver.findElements(By.xpath("//span[@class='onsale']"));
-		    System.out.println("Number of cookbooks on sale is " + allBooks.size());
-		}
+	 public boolean allBooksIsOnSale() {
 
+         List<WebElement> books = driver.findElements(countBooks);
+
+         List<WebElement> onSales = driver.findElements(booksOnSale);
+
+         if (books.size() == onSales.size()) {
+
+               return true;
+
+         }
+
+         return false;
+
+   }
 	
 
 	

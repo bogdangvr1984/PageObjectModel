@@ -14,7 +14,7 @@ public class DataProviderCookBooksSearchTest extends BaseTest{
 		ShopPage shopPage = new ShopPage(driver);
 		SoftAssert sa = new SoftAssert();
 		
-		menu.navigateTo(menu.booksLink);
+		menu.navigateTo(menu.shopLink);
 		shopPage.filterBooks(shopPage.filterByCookBooks);
 		shopPage.openBook(bookName);
 		

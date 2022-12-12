@@ -14,5 +14,6 @@ public class PostFormatsPage extends SeleniumWrappers{
 	}
 	
 	public By searchField = By.cssSelector("input[title='Search for:']");
+	public By audioPost = By.linkText("Audio post");
 
 }
