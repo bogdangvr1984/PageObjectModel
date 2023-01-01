@@ -1,0 +1,12 @@
+19:44:08.532 [main] INFO  utils.Log - Start ChromeBrowser
+19:44:10.949 [main] INFO  utils.Log - maximize chrome browser
+19:44:14.116 [main] INFO  utils.Log - Called method <waitForElementToBeVisible> on element with locator :By.id: log
+19:44:14.257 [main] INFO  utils.Log - called clear on method<sendKeys> on element null
+19:44:14.357 [main] INFO  utils.Log - called sendKeys on method<sendKeys> on element null
+19:44:14.435 [main] INFO  utils.Log - Called method <waitForElementToBeVisible> on element with locator :By.id: password
+19:44:14.526 [main] INFO  utils.Log - called clear on method<sendKeys> on element null
+19:44:14.592 [main] INFO  utils.Log - called sendKeys on method<sendKeys> on element null
+19:44:14.668 [main] INFO  utils.Log - Called method <waitForElementToBeClickable> on element with locator :By.xpath: //input[@class='submit_button']
+19:44:14.747 [main] INFO  utils.Log - called method <Click()> on element :null
+19:44:21.713 [main] INFO  utils.Log - Start ChromeBrowser
+19:44:22.603 [main] INFO  utils.Log - maximize chrome browser

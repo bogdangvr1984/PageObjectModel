@@ -13,27 +13,33 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import com.google.common.io.Files;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.MenuPage;
+import pages.ShopPage;
 
 public class BaseTest {
 	
 	public static WebDriver driver;
 	public MenuPage menu;
 	public BasePage app;
+	public ShopPage shop;
 
-	@BeforeClass
+	@BeforeMethod(alwaysRun = true)
 	public void setup() {
-		
+		Log.info("Start ChromeBrowser");
 		driver = WebDriverManager.chromedriver().create();
+	    Log.info("maximize chrome browser");
+		
 		driver.get("https://keybooks.ro");
 		//driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 		
 		menu = new MenuPage(driver);
 		app = new BasePage();
+		shop = new ShopPage(driver);
 		//driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
 		//driver.get("https://the-internet.herokuapp.com/dynamic_loading/2");
 		driver.manage().window().maximize();
@@ -42,7 +48,7 @@ public class BaseTest {
 	}
 	
 	
-	@AfterClass
+	@AfterMethod(alwaysRun = true)
 	
 	public void tearDown() throws InterruptedException {
 		

@@ -1,0 +1,6 @@
+00:04:55.154 [main] INFO  utils.Log - Start edge
+00:04:57.777 [main] INFO  utils.Log - maximize edge browser
+00:05:00.101 [main] INFO  utils.Log - Called method <waitForElementToBeClickable> on element with locator :By.xpath: //div[@class='top_panel_top_user_area']//a[@href='https://www.facebook.com/keytraining.ro']
+00:05:00.578 [main] INFO  utils.Log - called method <Click()> on element :null
+00:05:06.829 [main] INFO  utils.Log - Called method <waitForElementToBeClickable> on element with locator :By.xpath: //div[@class='top_panel_top_user_area']//a[@href='https://twitter.com/']
+00:05:06.893 [main] INFO  utils.Log - called method <Click()> on element :null

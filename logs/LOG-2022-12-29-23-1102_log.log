@@ -1,0 +1,8 @@
+23:11:02.478 [main] INFO  utils.Log - Start ChromeBrowser
+23:11:06.099 [main] INFO  utils.Log - maximize chrome browser
+23:11:08.969 [main] INFO  utils.Log - Called method <waitForElementToBeClickable> on element with locator :By.xpath: //div[@class='top_panel_top_user_area']//a[@href='https://www.facebook.com/keytraining.ro']
+23:11:09.428 [main] INFO  utils.Log - called method <Click()> on element :null
+23:11:15.691 [main] INFO  utils.Log - Called method <waitForElementToBeClickable> on element with locator :By.xpath: //div[@class='top_panel_top_user_area']//a[@href='https://twitter.com/']
+23:11:15.763 [main] INFO  utils.Log - called method <Click()> on element :null
+23:11:18.841 [main] INFO  utils.Log - Called method <waitForElementToBeClickable> on element with locator :By.xpath: //div[@class='top_panel_top_user_area']//a[@href='https://www.instagram.com']
+23:11:18.925 [main] INFO  utils.Log - called method <Click()> on element :null

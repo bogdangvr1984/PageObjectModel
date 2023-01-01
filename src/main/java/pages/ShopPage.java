@@ -46,6 +46,19 @@ public class ShopPage extends SeleniumWrappers {
          return false;
 
    }
+	 
+	 public boolean sortLowToHigh() {
+		 
+		int first = Integer.parseInt(driver.findElement(By.xpath("(//span[@class='price']/descendant::span[@class='woocommerce-Price-amount amount']/bdi/span)[2]")).getText());
+		 
+		int last = Integer.parseInt(driver.findElement(By.xpath("(//span[@class='price']/descendant::span[@class='woocommerce-Price-amount amount']/bdi/span)[last()]")).getText());
+		 
+		 if (first < last) {
+			 return true;
+		 }
+		 
+		 return false;
+	 }
 	
 
 	

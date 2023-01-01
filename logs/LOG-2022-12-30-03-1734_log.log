@@ -1,0 +1,4 @@
+03:17:34.153 [main] INFO  utils.Log - Start ChromeBrowser
+03:17:36.138 [main] INFO  utils.Log - maximize chrome browser
+03:17:37.610 [main] INFO  utils.Log - Called method <waitForElementToBeVisible> on element with locator :By.linkText: BLOG
+03:17:37.998 [main] INFO  utils.Log - Called method <waitForElementToBeVisible> on element with locator :By.linkText: Post Formats
