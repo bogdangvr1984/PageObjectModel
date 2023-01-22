@@ -1,0 +1,10 @@
+22:03:10.423 [main] INFO  utils.Log - Start ChromeBrowser
+22:03:12.247 [main] INFO  utils.Log - maximize chrome browser
+22:03:15.953 [main] INFO  utils.Log - Called method <waitForElementToBeClickable> on element with locator :By.linkText: Festival of Old Films
+22:03:16.094 [main] INFO  utils.Log - called method <Click()> on element :null
+22:03:18.151 [main] INFO  utils.Log - Called method <waitForElementToBeVisible> on element with locator :By.tagName: iframe
+22:03:18.227 [main] INFO  utils.Log - Called method <waitForElementToBeClickable> on element with locator :By.partialLinkText: map
+22:03:18.886 [main] INFO  utils.Log - called method <Click()> on element :null
+22:03:27.701 [main] INFO  utils.Log - Called method <waitForElementToBeVisible> on element with locator :By.tagName: iframe
+22:03:27.748 [main] INFO  utils.Log - Called method <waitForElementToBeClickable> on element with locator :By.partialLinkText: map
+22:03:27.805 [main] INFO  utils.Log - called method <Click()> on element :null

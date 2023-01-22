@@ -58,7 +58,7 @@ public class SeleniumWrappers extends BaseTest{
 			
 			waitForElementToBeClickable(locator);
 			WebElement element = driver.findElement(locator);
-			Log.info("called method <Click()> on element :" + element.getAttribute("outherHTML"));
+			Log.info("called method <Click()> on element :" + element.getAttribute("outerHTML"));
 			element.click();
 			//getWebElement(locator).click();
 			
@@ -108,9 +108,9 @@ public class SeleniumWrappers extends BaseTest{
 		try {
 			waitForElementToBeVisible(locator);
 			WebElement element = driver.findElement(locator);
-			Log.info("called clear on method<sendKeys> on element " + element.getAttribute("outherHTML"));
+			Log.info("called clear on method<sendKeys> on element " + element.getAttribute("outerHTML"));
 			element.clear();
-			Log.info("called sendKeys on method<sendKeys> on element " + element.getAttribute("outherHTML"));
+			Log.info("called sendKeys on method<sendKeys> on element " + element.getAttribute("outerHTML"));
 			element.sendKeys(textToBeSend);
 			
 		}catch(NoSuchElementException e) {

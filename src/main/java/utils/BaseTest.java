@@ -20,6 +20,7 @@ import com.google.common.io.Files;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.MenuPage;
 import pages.ShopPage;
+import pages.TheWickedKingBookPage;
 
 public class BaseTest {
 	

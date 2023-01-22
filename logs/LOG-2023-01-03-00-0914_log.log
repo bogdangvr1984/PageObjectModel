@@ -1,0 +1,4 @@
+00:09:14.833 [main] INFO  utils.Log - Start ChromeBrowser
+00:09:16.753 [main] INFO  utils.Log - maximize chrome browser
+00:09:18.423 [main] INFO  utils.Log - Called method <waitForElementToBeVisible> on element with locator :By.cssSelector: button[class*='search_submit']
+00:09:18.609 [main] INFO  utils.Log - called clear on method<sendKeys> on element null

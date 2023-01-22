@@ -7,6 +7,7 @@ import pages.GenericEventPage;
 import pages.MenuPage;
 import pages.PostFormatsPage;
 import pages.ShopPage;
+import pages.TheWickedKingBookPage;
 
 public class BasePage extends BaseTest{
 	
@@ -17,6 +18,7 @@ public class BasePage extends BaseTest{
 	public AudioPostPage audioPost = new AudioPostPage(driver);
 	public EventsPage events = new EventsPage(driver);
 	public GenericEventPage genericEvent = new GenericEventPage(driver);
+	public TheWickedKingBookPage wickedKing = new TheWickedKingBookPage(driver);
 	
 
 }

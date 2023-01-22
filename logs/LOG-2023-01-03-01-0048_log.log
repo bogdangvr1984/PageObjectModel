@@ -1,0 +1,5 @@
+01:00:48.164 [main] INFO  utils.Log - Start ChromeBrowser
+01:00:50.138 [main] INFO  utils.Log - maximize chrome browser
+01:00:52.875 [main] INFO  utils.Log - Called method <waitForElementToBeVisible> on element with locator :By.cssSelector: input[class='search_field']
+01:00:53.058 [main] INFO  utils.Log - called clear on method<sendKeys> on element null
+01:00:53.160 [main] INFO  utils.Log - called sendKeys on method<sendKeys> on element null

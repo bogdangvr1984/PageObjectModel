@@ -31,11 +31,14 @@ public class MenuPage extends SeleniumWrappers{
 	public By searchIcon = By.cssSelector("button[class*='search_submit']");
 	public By searchInput = By.cssSelector("input[class='search_field']");
 	
+	public By searchKing = By.xpath("//div[@class='search_results_content']/descendant::a[@href='https://keybooks.ro/shop/the-wicked-king/'][1]");
+	
 	public By facebook = By.xpath("//div[@class='top_panel_top_user_area']//a[@href='https://www.facebook.com/keytraining.ro']");
 	public By twitter = By.xpath("//div[@class='top_panel_top_user_area']//a[@href='https://twitter.com/']");
 	public By instagram = By.xpath("//div[@class='top_panel_top_user_area']//a[@href='https://www.instagram.com']");
 	
 	public By userName = By.xpath("//span[@class='user_name']");
+	
 	
 	public void search(String text) {
 		

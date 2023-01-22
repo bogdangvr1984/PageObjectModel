@@ -27,6 +27,8 @@ public class ShopPage extends SeleniumWrappers {
 	
 	public By orderDropDown = By.name("orderby");
 	
+	public By price = By.cssSelector("span[class='price']>span, span[class='price']>ins");
+	
 	public void filterBooks(By locator) {
 		driver.findElement(locator).click();
 	}
@@ -47,18 +49,23 @@ public class ShopPage extends SeleniumWrappers {
 
    }
 	 
-	 public boolean sortLowToHigh() {
-		 
-		int first = Integer.parseInt(driver.findElement(By.xpath("(//span[@class='price']/descendant::span[@class='woocommerce-Price-amount amount']/bdi/span)[2]")).getText());
-		 
-		int last = Integer.parseInt(driver.findElement(By.xpath("(//span[@class='price']/descendant::span[@class='woocommerce-Price-amount amount']/bdi/span)[last()]")).getText());
-		 
-		 if (first < last) {
-			 return true;
-		 }
-		 
-		 return false;
-	 }
+	public boolean sortLowToHigh() {
+
+         List<WebElement> prices = driver.findElements(price);
+
+         Double first = Double.parseDouble(prices.get(0).getText().replace('$', ' '));
+
+         Double last = Double.parseDouble(prices.get(prices.size()-1).getText().replace('$', ' '));
+
+         System.out.println(first);
+
+         if (first < last) {
+
+             return true;
+         }
+
+         return false;
+    }
 	
 
 	
